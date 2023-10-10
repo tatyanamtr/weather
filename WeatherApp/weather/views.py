@@ -1,10 +1,11 @@
 import requests
+import os
 from django.shortcuts import render
 
 # Create your views here.
 
 def index(request):
-    appID = '02274ac1b8ecba7cbb4b0ac942c964f8'
+    appID = os.getenv('OpenWeatherToken')
 
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=' + appID + '&units=metric'
 

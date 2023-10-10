@@ -23,8 +23,8 @@
     <div class="container mt-5">
         
         <div class="row">
-            <div class="col-5 offset-1">
-                <h1>Weather in your city</h1>
+            <div class="col-4 offset-1">
+                <h3>Weather in your city</h3>
                 <form action="">
                     <label for="city">Choose a city</label>
                     <input type="text" id="city" class="form-control" name="city" placeholder="City">
@@ -32,8 +32,22 @@
                     <input type="submit" value="Show weather" name="send" class="w-80 btn btn-lg btn-primary">
                 </form>
             </div>
-            <div class="col-4 offset-1">
-                <h1>Weather in another cities</h1>
+            <div class="col-5 offset-2">
+                <h3>Weather in another cities</h3>
+                <div class="alert alert-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <b>City name: {{ info.city_name }}</b>
+                            <p>Temperature: {{ info.temp }} Celcius</p>
+                        </div>
+                        <div class="col-2 offset-1">
+                            <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="" class="img-thumbnail" width="50px">
+                        </div>
+                    </div>
+                </div>
+                
+                
+
             </div>
         </div>
     </div>

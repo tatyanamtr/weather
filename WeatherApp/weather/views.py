@@ -14,9 +14,13 @@ def index(request):
     
     city_info = {
         'city_name': city_name,
-        'temp': response["main"]["temp"],
+        'temp': response['main']['temp'],
+        'icon': response['weather'][0]['icon']
         
     }
-    print(city_info)
+    
+    context = {
+        'info': city_info
+        }
 
-    return render(request, 'weather/index.html')
+    return render(request, 'weather/index.html', context)

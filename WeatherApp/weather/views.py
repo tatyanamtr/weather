@@ -15,7 +15,7 @@ def index(request):
     all_cities = []
 
     for city in cities:
-        response = requests.get(url.format(city)).json()
+        response = requests.get(url.format(city.city_name)).json()
         city_info = {
         'city_name': city.city_name,
         'temp': response['main']['temp'],

@@ -34,17 +34,19 @@
             </div>
             <div class="col-5 offset-2">
                 <h3>Weather in another cities</h3>
+                {% for info in all_info %}
                 <div class="alert alert-info">
                     <div class="row">
                         <div class="col-9">
                             <b>City name: {{ info.city_name }}</b>
-                            <p>Temperature: {{ info.temp }} Celcius</p>
+                            <p>Temperature: {{ info.temp }} °C</p>
                         </div>
                         <div class="col-2 offset-1">
                             <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="" class="img-thumbnail" width="50px">
                         </div>
                     </div>
                 </div>
+                {% endfor %}
                 
                 
 
